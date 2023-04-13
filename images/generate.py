@@ -29,7 +29,8 @@ def gen_image(input_image_path="input_image.png", output_image_path="out_image.a
     output_image_path = "output_image.art"
     with open(output_image_path, "wb") as f:
         img.save(f, "PNG")
-        f.write(metadata_str.encode("utf-8"))
+        print("img is " + str(img))
+        # f.write(metadata_str.encode("utf-8"))
 
 
 if __name__ == "__main__":
