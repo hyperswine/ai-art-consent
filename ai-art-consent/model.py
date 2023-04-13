@@ -59,3 +59,6 @@ for epoch in range(num_epochs):
 # Generate output image and list of contributing artist IDs
 output_image = model(input_image, artist_id)
 contributing_artists = [artist_id]
+
+# Print it
+print(output_image)

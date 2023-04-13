@@ -7,10 +7,13 @@ readme = "README.md"
 packages = [{include = "ai_art_consent"}]
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.10"
 torch = "^2.0.0"
 torchvision = "^0.15.1"
 torchaudio = "^2.0.1"
+
+[tool.poetry.group.dev.dependencies]
+autopep8 = "^2.0.2"
 
 [build-system]
 requires = ["poetry-core"]
