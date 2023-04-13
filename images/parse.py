@@ -3,8 +3,7 @@ from PIL import Image
 from io import BytesIO
 
 
-def parse_art_file() -> Image.Image:
-    input_image_path = "output_image.art"
+def parse_art_file(input_image_path = "output_image.art") -> Image.Image:
     with open(input_image_path, "rb") as f:
         data = f.read()
 
@@ -27,4 +26,4 @@ def parse_art_file() -> Image.Image:
 
 
 if __name__ == "__main__":
-    parse_art_file()
+    parse_art_file("output_image.art")

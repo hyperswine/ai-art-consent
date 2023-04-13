@@ -1,5 +1,6 @@
 # generate images of the .art format
 
+from enum import Enum
 import json
 from PIL import Image
 
@@ -11,6 +12,10 @@ sample_metadata = {
     "consent": True,
     "value_per_percentage": 0.02
 }
+
+class ImageClass(Enum):
+    Png = "PNG"
+    Jpg = "JPG"
 
 
 def gen_image(input_image_path="input_image.png", output_image_path="out_image.art", metadata=sample_metadata):
@@ -28,4 +33,4 @@ def gen_image(input_image_path="input_image.png", output_image_path="out_image.a
 
 
 if __name__ == "__main__":
-    gen_image()
+    gen_image("images/arif-birds-eye-1.png")
