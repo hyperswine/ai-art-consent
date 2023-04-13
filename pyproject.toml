@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "ai-art-consent"
+version = "0.1.0"
+description = ""
+authors = ["Jasen Qin <jiasheng.qin@student.unsw.edu.au>"]
+readme = "README.md"
+packages = [{include = "ai_art_consent"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+torch = "^2.0.0"
+torchvision = "^0.15.1"
+torchaudio = "^2.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
