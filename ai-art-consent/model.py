@@ -39,6 +39,8 @@ class MiniStableDiffusion(nn.Module):
 
     def forward(self, x, artist_id):
         x_embed = self.embedding(x)
+        # Add this line to print the size of the image embedding
+        print(x_embed.size())
         x_flatten = x_embed.view(x_embed.size(0), -1)
         x_concat = torch.cat((x_flatten, artist_id), dim=1)
         x_fc1 = torch.relu(self.fc1(x_concat))
