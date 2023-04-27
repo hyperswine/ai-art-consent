@@ -1,0 +1,16 @@
+def forward(self, x, artist_id):
+        x_embed = self.embedding(x)
+        print(x_embed.size())
+
+        x_flatten = x_embed.view(x_embed.size(0), -1)
+        x_concat = torch.cat((x_flatten, artist_id), dim=1)
+        x_fc1 = torch.relu(self.fc1(x_concat))
+        x_out = self.fc2(x_fc1)
+
+for epoch in range(num_epochs):
+    optimizer.zero_grad()
+    output = model(input_image, artist_id)
+    loss = criterion(output, input_image.view(input_image.size(0), -1))
+    loss.backward()
+    optimizer.step()
+    print(f'Epoch: {epoch+1}, Loss: {loss.item()}')
